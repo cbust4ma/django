@@ -13,7 +13,7 @@ if [ $# -ne 1 ] || [ -z "$url" ]; then
    
     exit 1
 fi
-resolv=$(curl -X HEAD -I -s $url | grep location | cut -c 11-)
+resolv=$(curl -X HEAD -I -s $url | grep Location | cut -c 11-)
 if [ -z $resolv ]; then
     echo -e "${RED}The URL is not valid!${NC}"
     exit 1
